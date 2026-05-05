@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-muted-foreground">
-          <p>© 2025 SWAD Digital Solutions Ltd. All rights reserved.</p>
+          <p>© 2026 SWAD Digital Solutions Ltd. All rights reserved.</p>
           <div className="flex space-x-6">
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>

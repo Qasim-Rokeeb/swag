@@ -45,35 +45,36 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
               className="relative hidden lg:block"
             >
               <div className="relative w-full aspect-square max-w-lg mx-auto">
+                {/* Main Image Container */}
                 <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full animate-pulse" />
-                <div className="relative z-10 glass border-white/20 rounded-3xl p-8 shadow-2xl backdrop-blur-2xl">
-                  <div className="grid grid-cols-2 gap-4">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="aspect-square rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
-                        <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                          <Cpu className="text-primary" />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-8 p-4 rounded-xl bg-white/5 border border-white/10">
-                    <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                <div className="relative z-10 glass border-white/20 rounded-3xl p-4 shadow-2xl backdrop-blur-2xl overflow-hidden aspect-square group">
+                  <Image 
+                    src="/images/hero-tech.png" 
+                    alt="Technology Innovation" 
+                    fill
+                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
+                  
+                  {/* System Status Overlay */}
+                  <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass border-white/10 z-20">
+                    <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mb-3">
                       <motion.div 
                         initial={{ width: 0 }}
-                        animate={{ width: "75%" }}
+                        animate={{ width: "88%" }}
                         transition={{ duration: 2, delay: 1 }}
                         className="h-full bg-primary" 
                       />
                     </div>
-                    <div className="flex justify-between mt-2 text-xs font-mono text-muted-foreground">
-                      <span>SYSTEM READY</span>
-                      <span>99.9% UPTIME</span>
+                    <div className="flex justify-between text-[10px] font-mono text-white/70 tracking-widest uppercase">
+                      <span>Neural Engine Active</span>
+                      <span>88% Efficiency</span>
                     </div>
                   </div>
                 </div>
@@ -82,14 +83,14 @@ export default function Home() {
                 <motion.div
                   animate={{ y: [0, -20, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-10 -right-10 glass p-4 rounded-2xl border-white/20 z-20"
+                  className="absolute -top-10 -right-10 glass p-4 rounded-2xl border-white/20 z-20 shadow-xl"
                 >
                   <Shield className="text-primary w-8 h-8" />
                 </motion.div>
                 <motion.div
                   animate={{ y: [0, 20, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-10 -left-10 glass p-4 rounded-2xl border-white/20 z-20"
+                  className="absolute -bottom-10 -left-10 glass p-4 rounded-2xl border-white/20 z-20 shadow-xl"
                 >
                   <Globe className="text-primary w-8 h-8" />
                 </motion.div>
