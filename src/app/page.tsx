@@ -34,13 +34,17 @@ export default function Home() {
                 Building intelligent systems and resilient infrastructure that accelerate business transformation across emerging and developed markets.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Link href="/services">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 h-14 text-lg rounded-xl group">
                   Explore Our Solutions
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
+                </Link>
+                <Link href="/contact">
                 <Button size="lg" variant="outline" className="border-white/10 hover:bg-white/5 h-14 text-lg rounded-xl px-8">
                   Contact Us
                 </Button>
+                </Link>
               </div>
             </motion.div>
 
