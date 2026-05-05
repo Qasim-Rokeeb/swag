@@ -68,6 +68,13 @@ export default function Navbar() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
+                    Home
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent")}>
                     About
@@ -144,6 +151,7 @@ export default function Navbar() {
             className="md:hidden bg-background border-b border-white/10 overflow-hidden"
           >
             <div className="container mx-auto px-6 py-8 flex flex-col space-y-6">
+              <Link href="/" className="text-xl font-medium" onClick={() => setIsOpen(false)}>Home</Link>
               <Link href="/about" className="text-xl font-medium" onClick={() => setIsOpen(false)}>About</Link>
               <div className="flex flex-col space-y-4">
                 <span className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Solutions</span>
