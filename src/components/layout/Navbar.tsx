@@ -124,9 +124,6 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button asChild variant="ghost">
-            <Link href="/contact">Login</Link>
-          </Button>
           <Button asChild className="bg-primary hover:bg-primary/90">
             <Link href="/contact">Contact Sales</Link>
           </Button>
@@ -168,9 +165,6 @@ export default function Navbar() {
               </div>
               <Link href="/news" className="text-xl font-medium" onClick={() => setIsOpen(false)}>News</Link>
               <div className="pt-4 flex flex-col space-y-4">
-                <Button asChild variant="outline" onClick={() => setIsOpen(false)}>
-                  <Link href="/contact">Login</Link>
-                </Button>
                 <Button asChild className="bg-primary" onClick={() => setIsOpen(false)}>
                   <Link href="/contact">Contact Sales</Link>
                 </Button>
